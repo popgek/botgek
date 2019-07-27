@@ -1,21 +1,12 @@
 import { botgekClient } from './core/botgekClient';
 import permissionLevels from './core/lib/permissionLevels';
-
-/* Glitch stuff, because we're too poor to hire a server.
 import * as express from 'express';
-import * as http from 'http';
 
 const app = new express();
-app.get('/', (request, response) => {
-  response.sendStatus(200);
+app.set('port', process.env.PORT || 3000);
+app.listen(app.get('port'), function() {
+  console.log(`App listening on port ${app.get('port')}`);
 });
-app.listen(process.env.PORT, function() {
-  console.log(`App listening on port ${process.env.PORT}`);
-});
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
-*/
 
 require('dotenv').config();
 
